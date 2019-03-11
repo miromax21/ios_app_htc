@@ -13,7 +13,7 @@ class PupilFunctions {
         PupilData.pupilModels.append(pupil)
         self.savePupilsToLocalFile()
     }
-    static func readTrips(completion: @escaping () -> ()){
+    static func readPupils(completion: @escaping () -> ()){
         DispatchQueue.global(qos: .background).sync {
             if PupilData.pupilModels.count == 0{
                 PupilData.pupilModels = self.getPupilsFromLocalFile()
@@ -32,7 +32,7 @@ class PupilFunctions {
             }
         }
     }
-    static func deleteTrip(index:Int){
+    static func deletePupil(index:Int){
         PupilData.pupilModels.remove(at: index)
         self.savePupilsToLocalFile()
     }

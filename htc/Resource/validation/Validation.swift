@@ -7,17 +7,6 @@
 //
 
 import Foundation
-extension String{
-    func isValid(rexeg:String) -> Bool {
-        let stringTest = NSPredicate(format:"SELF MATCHES %@", rexeg)
-        return stringTest.evaluate(with: self)
-    }
-}
-enum ValidationTypeEnum {
-    case name
-    case lastName
-    case gradePointAverage
-}
 enum RegExEnum: String {
     case name = "^[A-ZА-я]+[a-zа-я]*$"
     case gradePointAverage = "[0-5]{1}"
@@ -50,10 +39,9 @@ class Validation: NSObject {
                   errors.append(InvalideObject(key: value.lable, errorMrssage: "can't be empty"))
             }
             else if !value.inputValue.isValid(rexeg: value.type.rawValue){
-                errors.append(InvalideObject(key: value.lable, errorMrssage: "invalid"))
+                errors.append(InvalideObject(key: value.lable, errorMrssage: "is invalid"))
             }
         }
         return errors
     }
-    
 }

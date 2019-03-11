@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E76BCDF4220C82740087714B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76BCDF3220C82740087714B /* AppDelegate.swift */; };
-		E76BCDF6220C82740087714B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76BCDF5220C82740087714B /* ViewController.swift */; };
-		E76BCDF9220C82740087714B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76BCDF7220C82740087714B /* Main.storyboard */; };
 		E76BCDFB220C82760087714B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76BCDFA220C82760087714B /* Assets.xcassets */; };
 		E76BCDFE220C82760087714B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76BCDFC220C82760087714B /* LaunchScreen.storyboard */; };
 		E76BCE07220C82E20087714B /* PupilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76BCE06220C82E20087714B /* PupilsViewController.swift */; };
@@ -26,14 +24,13 @@
 		E76BCE24220CA1030087714B /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76BCE23220CA1030087714B /* Color.xcassets */; };
 		E76BCE26220CA6CC0087714B /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76BCE25220CA6CC0087714B /* UIViewControllerExtention.swift */; };
 		E791944122339D850066D9DD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E791944022339D850066D9DD /* UIViewExtensions.swift */; };
+		E7919443223419540066D9DD /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7919442223419540066D9DD /* StringExtentions.swift */; };
 		E7EF4630220F03B90059A047 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EF462F220F03B90059A047 /* Validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E76BCDF0220C82740087714B /* htc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = htc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76BCDF3220C82740087714B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E76BCDF5220C82740087714B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E76BCDF8220C82740087714B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E76BCDFA220C82760087714B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E76BCDFD220C82760087714B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E76BCDFF220C82760087714B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +48,7 @@
 		E76BCE23220CA1030087714B /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		E76BCE25220CA6CC0087714B /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
 		E791944022339D850066D9DD /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		E7919442223419540066D9DD /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		E7EF462F220F03B90059A047 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,8 +86,6 @@
 				E76BCE22220CA0C10087714B /* Models */,
 				E76BCE1B220C9F310087714B /* Views */,
 				E76BCDF3220C82740087714B /* AppDelegate.swift */,
-				E76BCDF5220C82740087714B /* ViewController.swift */,
-				E76BCDF7220C82740087714B /* Main.storyboard */,
 				E76BCDFC220C82760087714B /* LaunchScreen.storyboard */,
 				E76BCDFF220C82760087714B /* Info.plist */,
 			);
@@ -112,6 +108,7 @@
 				E76BCE0B220C86440087714B /* UITableViewExtentions.swift */,
 				E76BCE25220CA6CC0087714B /* UIViewControllerExtention.swift */,
 				E791944022339D850066D9DD /* UIViewExtensions.swift */,
+				E7919442223419540066D9DD /* StringExtentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -243,7 +240,6 @@
 				E76BCDFE220C82760087714B /* LaunchScreen.storyboard in Resources */,
 				E76BCE09220C82EF0087714B /* PupilsViewController.storyboard in Resources */,
 				E76BCDFB220C82760087714B /* Assets.xcassets in Resources */,
-				E76BCDF9220C82740087714B /* Main.storyboard in Resources */,
 				E76BCE24220CA1030087714B /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76BCE1A220C9EA60087714B /* EditPupilViewController.swift in Sources */,
+				E7919443223419540066D9DD /* StringExtentions.swift in Sources */,
 				E76BCE13220C904D0087714B /* PupilData.swift in Sources */,
 				E76BCE11220C89DA0087714B /* PupilModel.swift in Sources */,
 				E76BCE15220C90D80087714B /* PupilFunctions.swift in Sources */,
@@ -264,7 +261,6 @@
 				E76BCE26220CA6CC0087714B /* UIViewControllerExtention.swift in Sources */,
 				E76BCE0C220C86440087714B /* UITableViewExtentions.swift in Sources */,
 				E791944122339D850066D9DD /* UIViewExtensions.swift in Sources */,
-				E76BCDF6220C82740087714B /* ViewController.swift in Sources */,
 				E76BCE0E220C89710087714B /* PupilsTableViewCell.swift in Sources */,
 				E76BCDF4220C82740087714B /* AppDelegate.swift in Sources */,
 				E76BCE07220C82E20087714B /* PupilsViewController.swift in Sources */,
@@ -275,14 +271,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E76BCDF7220C82740087714B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E76BCDF8220C82740087714B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E76BCDFC220C82760087714B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -14,10 +14,14 @@
         <scene sceneID="azY-eL-FC3">
             <objects>
                 <viewController id="tSp-xd-w31" customClass="EditPupilViewController" customModule="htc" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" semanticContentAttribute="playback" id="qxJ-cw-01r">
+                    <view key="view" contentMode="scaleToFill" id="qxJ-cw-01r">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGV-bq-oqr">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="CZM-Cj-5pE" customClass="PopupUIView" customModule="htc" customModuleProvider="target">
                                 <rect key="frame" x="325" y="100" width="374" height="203"/>
                                 <subviews>
@@ -127,9 +131,12 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.74668236301369861" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GGV-bq-oqr" firstAttribute="top" secondItem="qxJ-cw-01r" secondAttribute="top" id="2Rj-Z3-GJs"/>
                             <constraint firstItem="CZM-Cj-5pE" firstAttribute="centerX" secondItem="qxJ-cw-01r" secondAttribute="centerX" id="Cdo-ve-hKE"/>
+                            <constraint firstItem="y8M-AD-lP2" firstAttribute="bottom" secondItem="GGV-bq-oqr" secondAttribute="bottom" id="Hty-qU-DJf"/>
+                            <constraint firstItem="GGV-bq-oqr" firstAttribute="leading" secondItem="y8M-AD-lP2" secondAttribute="leading" id="KxU-IB-W2h"/>
+                            <constraint firstItem="y8M-AD-lP2" firstAttribute="trailing" secondItem="GGV-bq-oqr" secondAttribute="trailing" id="n1M-Pa-2Fx"/>
                             <constraint firstItem="CZM-Cj-5pE" firstAttribute="top" secondItem="qxJ-cw-01r" secondAttribute="topMargin" constant="80" id="uPy-nh-Tgn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y8M-AD-lP2"/>

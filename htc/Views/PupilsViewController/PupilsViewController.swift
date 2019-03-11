@@ -11,17 +11,18 @@ class PupilsViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     var pupilIndexToEdit: Int?
     var pupilId = UUID()
+    let EditPupilSequeIdentifier = "toEditPupilSeque"
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        PupilFunctions.readTrips(completion: {  [weak self] in
+        PupilFunctions.readPupils(completion: {  [weak self] in
             self?.tableView.reloadData()
         })
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toEditPupilSeque" {
+        if segue.identifier == self.EditPupilSequeIdentifier {
             let popup = segue.destination as! EditPupilViewController
             popup.pupilIndex = self.pupilIndexToEdit
             popup.pupilId = self.pupilId
@@ -47,21 +48,20 @@ extension PupilsViewController:UITableViewDataSource, UITableViewDelegate{
         
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let trip = PupilData.pupilModels[indexPath.row]
+        let pupil = PupilData.pupilModels[indexPath.row]
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerfofmed: @escaping (Bool) -> ()) in
-            let alert = UIAlertController(title: "Delete trip", message: "Are you sure went to delete this trip: \(String(describing: trip.name!))", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Delete user", message: "Are you sure want to delete the user: \(String(describing: pupil.name!))", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
                 actionPerfofmed(false)
             }))
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
-                PupilFunctions.deleteTrip(index: indexPath.row)
+                PupilFunctions.deletePupil(index: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 actionPerfofmed(true)
             }))
             self.present(alert, animated: true)
         }
-        //delete.backgroundColor = Theme.tintColor
-        // delete.image = UIImage(named: "Delete")
+        delete.backgroundColor = Theme.colorRed
         return UISwipeActionsConfiguration(actions: [delete])
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -69,7 +69,7 @@ extension PupilsViewController:UITableViewDataSource, UITableViewDelegate{
         let pupil = PupilData.pupilModels[indexPath.row]
         self.pupilId = pupil.id
         self.pupilIndexToEdit = indexPath.row
-        self.performSegue(withIdentifier: "toEditPupilSeque", sender: nil)
+        self.performSegue(withIdentifier: self.EditPupilSequeIdentifier, sender: nil)
     }
     
 }
